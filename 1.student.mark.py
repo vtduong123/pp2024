@@ -26,3 +26,13 @@ def list_students(students):
             print(f"{i+1}. {student['id']} - {student['name']} - {student['DoB']}")
             if "marks" in student:
                 print("Marks (Course Id - Mark): ", student["marks"])
+                
+                
+# Function to list courses
+def list_courses(courses):
+    if not courses:
+        print("There aren't any courses yet")
+    else:
+        print("Here is the course list: ")
+        for i, course in enumerate(courses):
+            print(f"{i+1}. {course['id']} - {course['name']}")
