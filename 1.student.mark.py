@@ -54,3 +54,22 @@ def main():
         5. List Courses
         """)
         option = int(input("Your choice: "))
+        
+        if option == 0:
+            break
+        elif option == 1:
+            students.append(input_infos("student"))
+        elif option == 2:
+            courses.append(input_infos("course"))
+        elif option == 3:
+            student_index = int(input("Enter student index to enter mark: ")) - 1
+            input_mark(students[student_index], courses)
+        elif option == 4:
+            list_students(students)
+        elif option == 5:
+            list_courses(courses)
+        else:
+            print("Invalid input. Please try again!")
+
+if __name__ == "__main__":
+    main()
