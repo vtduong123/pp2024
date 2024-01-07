@@ -36,3 +36,21 @@ def list_courses(courses):
         print("Here is the course list: ")
         for i, course in enumerate(courses):
             print(f"{i+1}. {course['id']} - {course['name']}")
+
+
+# Main function
+def main():
+    # Initialize lists
+    courses = []
+    students = []
+
+    while True:
+        print("""
+        0. Exit
+        1. Add Student
+        2. Add Course
+        3. Input Mark for Student
+        4. List Students
+        5. List Courses
+        """)
+        option = int(input("Your choice: "))
