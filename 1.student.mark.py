@@ -2,13 +2,20 @@
 def input_something(args):
     return int(input(f"Enter the number of {args} in this class: "))
 
-# Function to input information for a type (student/course info)
-def input_infos(args):
-    item = {}
-    item['id'] = input("Enter ID: ")
-    item['name'] = input("Enter Name: ")
-    item['DoB'] = input("Enter Date of Birth (DoB): ")
-    return item
+# Function to input student information
+def input_student_info():
+    student = {}
+    student['id'] = input("Enter Student ID: ")
+    student['name'] = input("Enter Student Name: ")
+    student['DoB'] = input("Enter Student Date of Birth (DoB): ")
+    return student
+
+# Function to input course information
+def input_course_info():
+    course = {}
+    course['id'] = input("Enter Course ID: ")
+    course['name'] = input("Enter Course Name: ")
+    return course
 
 # Function to input student marks based on the course id
 def input_mark(student, courses):
@@ -58,9 +65,9 @@ def main():
         if option == 0:
             break
         elif option == 1:
-            students.append(input_infos("student"))
+            students.append(input_student_info())
         elif option == 2:
-            courses.append(input_infos("course"))
+            courses.append(input_course_info())
         elif option == 3:
             student_index = int(input("Enter student index to enter mark: ")) - 1
             input_mark(students[student_index], courses)
